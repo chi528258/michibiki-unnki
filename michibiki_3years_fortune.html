@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>michibiki｜3年間の運気鑑定書</title>
+<style>
+:root{--rose:#c99eaa;--ink:#5b5052;--line:#eadde0;--cream:#fffaf4}
+*{box-sizing:border-box}body{margin:0;background:#f8f4f2;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Yu Gothic",Meiryo,sans-serif;line-height:1.8}
+header{text-align:center;padding:25px 12px;background:linear-gradient(135deg,#f6e6e9,#fff8ee)}
+.brand{letter-spacing:.25em;color:#a87987;font-family:Georgia,serif;font-size:13px}header h1{font-size:22px;font-weight:500;margin:5px}
+header p{font-size:12px;color:#927f82;margin:0}.wrap{max-width:850px;margin:20px auto;padding:0 14px 40px}
+.note{background:white;border:1px solid var(--line);border-radius:12px;padding:12px 15px;font-size:12px;margin-bottom:14px}
+.tabs{display:flex;gap:8px;margin-bottom:14px}.tab{flex:1;padding:10px;border:1px solid var(--line);border-radius:12px;background:white;color:#88777a;font-size:14px}
+.tab.active{background:#dfd2e4;color:#584b60;border-color:#dfd2e4}.panel{display:none}.panel.active{display:block}
+.editor,.sheet{background:white;border:1px solid var(--line);border-radius:17px;padding:20px;margin-bottom:16px}
+.editor h2{text-align:center;color:#9b7782;font-weight:500;margin:0 0 18px;font-size:24px}
+label{display:block;font-size:14px;font-weight:600;margin:14px 0 6px}small{font-size:11px;color:#a18d91;font-weight:400;margin-left:5px}
+select,textarea{display:block;width:100%;margin-top:5px;border:1px solid #e7dadd;border-radius:10px;background:#fffdfb;padding:11px;color:var(--ink);font:inherit}
+textarea{min-height:100px;resize:vertical}.short{min-height:65px}.love{min-height:130px}
+.sheet{background:var(--cream);padding:22px 24px}.sheet .brand{text-align:center}.sheet h2{text-align:center;font-weight:500;font-size:20px;color:#92717b;margin:5px}.sheet h3{text-align:center;font-weight:500;color:#b18b7a;margin:5px 0 22px}
+.result{margin:17px 0}.result b{display:block;color:#9b7782;border-bottom:1px solid #e7d9d3;padding-bottom:4px;font-size:14px}.result p{white-space:pre-wrap;margin:7px 0 0;font-size:13px;min-height:1.8em}
+.sheet footer{text-align:center;color:#a28f91;font-size:11px;margin-top:25px;letter-spacing:.12em}
+.actions{display:flex;gap:10px;flex-wrap:wrap}.action{border:0;border-radius:30px;background:var(--rose);color:white;padding:12px 19px;font-size:13px}.secondary{background:#eee7e8;color:#76686b}
+@media(min-width:700px){.editor{padding:26px 32px}.sheet{padding:30px 40px}}
+@media print{body{background:white}header,.note,.tabs,.editor,.actions{display:none!important}.wrap{margin:0;padding:0;max-width:none}.panel{display:block!important;break-after:page;page-break-after:always}.panel:last-child{break-after:auto}.sheet{border:0;border-radius:0;margin:0;min-height:275mm;padding:18mm 17mm;background:white}.sheet h2{font-size:23px}.result{margin:22px 0}.result p{font-size:14px;line-height:2}}
+</style></head><body>
+<header><div class="brand">michibiki</div><h1>3年間の運気鑑定書</h1><p>自分らしい未来へ進むための、3年分の運気ガイド</p></header>
+<main class="wrap"><div class="note">生年月日の入力はありません。各年の12運星を選び、送ってもらった資料をもとに鑑定内容を手入力してください。</div>
+<nav class="tabs"><button class="tab active" data-year="2026">2026年</button><button class="tab" data-year="2027">2027年</button><button class="tab" data-year="2028">2028年</button></nav>
+
+<section class="panel active" id="p2026" data-year="2026">
+ <div class="editor">
+  <h2>2026年</h2>
+  <label>運気｜12運星を選択<select data-key="star"><option value="">選択してください</option></select></label>
+  <label>運気の流れ <small>3〜5行ほど</small><textarea data-key="fortune" placeholder="運気の特徴や過ごし方"></textarea></label>
+  <label>総合運勢 <small>5行ほど</small><textarea data-key="overall" placeholder="一年全体の流れ"></textarea></label>
+  <label>仕事 <small>2行ほど</small><textarea class="short" data-key="work" placeholder="仕事運"></textarea></label>
+  <label>健康 <small>2行ほど</small><textarea class="short" data-key="health" placeholder="健康面"></textarea></label>
+  <label>恋愛 <small>6行ほど</small><textarea class="love" data-key="love" placeholder="恋愛運"></textarea></label>
+ </div>
+ <article class="sheet">
+  <div class="brand">michibiki</div><h2>2026–2028 運気鑑定書</h2><h3>2026年</h3>
+  <div class="result"><b>運気｜<span data-out="star">12運星</span></b><p data-out="fortune">運気の内容がここに表示されます。</p></div>
+  <div class="result"><b>総合運勢</b><p data-out="overall">総合運勢がここに表示されます。</p></div>
+  <div class="result"><b>仕事</b><p data-out="work">仕事運がここに表示されます。</p></div>
+  <div class="result"><b>健康</b><p data-out="health">健康面がここに表示されます。</p></div>
+  <div class="result"><b>恋愛</b><p data-out="love">恋愛運がここに表示されます。</p></div>
+  <footer>michibiki 〜みちびき〜</footer>
+ </article>
+</section>
+
+<section class="panel" id="p2027" data-year="2027">
+ <div class="editor">
+  <h2>2027年</h2>
+  <label>運気｜12運星を選択<select data-key="star"><option value="">選択してください</option></select></label>
+  <label>運気の流れ <small>3〜5行ほど</small><textarea data-key="fortune" placeholder="運気の特徴や過ごし方"></textarea></label>
+  <label>総合運勢 <small>5行ほど</small><textarea data-key="overall" placeholder="一年全体の流れ"></textarea></label>
+  <label>仕事 <small>2行ほど</small><textarea class="short" data-key="work" placeholder="仕事運"></textarea></label>
+  <label>健康 <small>2行ほど</small><textarea class="short" data-key="health" placeholder="健康面"></textarea></label>
+  <label>恋愛 <small>6行ほど</small><textarea class="love" data-key="love" placeholder="恋愛運"></textarea></label>
+ </div>
+ <article class="sheet">
+  <div class="brand">michibiki</div><h2>2026–2028 運気鑑定書</h2><h3>2027年</h3>
+  <div class="result"><b>運気｜<span data-out="star">12運星</span></b><p data-out="fortune">運気の内容がここに表示されます。</p></div>
+  <div class="result"><b>総合運勢</b><p data-out="overall">総合運勢がここに表示されます。</p></div>
+  <div class="result"><b>仕事</b><p data-out="work">仕事運がここに表示されます。</p></div>
+  <div class="result"><b>健康</b><p data-out="health">健康面がここに表示されます。</p></div>
+  <div class="result"><b>恋愛</b><p data-out="love">恋愛運がここに表示されます。</p></div>
+  <footer>michibiki 〜みちびき〜</footer>
+ </article>
+</section>
+
+<section class="panel" id="p2028" data-year="2028">
+ <div class="editor">
+  <h2>2028年</h2>
+  <label>運気｜12運星を選択<select data-key="star"><option value="">選択してください</option></select></label>
+  <label>運気の流れ <small>3〜5行ほど</small><textarea data-key="fortune" placeholder="運気の特徴や過ごし方"></textarea></label>
+  <label>総合運勢 <small>5行ほど</small><textarea data-key="overall" placeholder="一年全体の流れ"></textarea></label>
+  <label>仕事 <small>2行ほど</small><textarea class="short" data-key="work" placeholder="仕事運"></textarea></label>
+  <label>健康 <small>2行ほど</small><textarea class="short" data-key="health" placeholder="健康面"></textarea></label>
+  <label>恋愛 <small>6行ほど</small><textarea class="love" data-key="love" placeholder="恋愛運"></textarea></label>
+ </div>
+ <article class="sheet">
+  <div class="brand">michibiki</div><h2>2026–2028 運気鑑定書</h2><h3>2028年</h3>
+  <div class="result"><b>運気｜<span data-out="star">12運星</span></b><p data-out="fortune">運気の内容がここに表示されます。</p></div>
+  <div class="result"><b>総合運勢</b><p data-out="overall">総合運勢がここに表示されます。</p></div>
+  <div class="result"><b>仕事</b><p data-out="work">仕事運がここに表示されます。</p></div>
+  <div class="result"><b>健康</b><p data-out="health">健康面がここに表示されます。</p></div>
+  <div class="result"><b>恋愛</b><p data-out="love">恋愛運がここに表示されます。</p></div>
+  <footer>michibiki 〜みちびき〜</footer>
+ </article>
+</section>
+<div class="actions"><button class="action" onclick="window.print()">鑑定書を印刷・PDF保存</button><button class="action secondary" onclick="clearAll()">入力内容をクリア</button></div>
+</main>
+<script>
+const stars=["胎","養","長生","沐浴","冠帯","建禄","帝旺","衰","病","死","墓","絶"];
+document.querySelectorAll('select').forEach(s=>stars.forEach(v=>{let o=document.createElement('option');o.value=v;o.textContent=v;s.appendChild(o)}));
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.dataset.year===b.dataset.year))});
+document.querySelectorAll('.panel').forEach(p=>p.querySelectorAll('[data-key]').forEach(el=>{
+ const out=p.querySelector('[data-out="'+el.dataset.key+'"]');
+ const update=()=>out.textContent=el.value|| (el.dataset.key==='star'?'12運星':'入力した内容がここに表示されます。');
+ el.addEventListener('input',update);el.addEventListener('change',update);
+}));
+function clearAll(){if(!confirm('3年分の入力内容を消去しますか？'))return;document.querySelectorAll('textarea,select').forEach(e=>e.value='');document.querySelectorAll('[data-out]').forEach(e=>e.textContent=e.dataset.out==='star'?'12運星':'入力した内容がここに表示されます。')}
+</script></body></html>
